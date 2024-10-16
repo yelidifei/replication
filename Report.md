@@ -77,19 +77,5 @@ While the core part of this analysis was successfully run, I encountered some is
 
 The original paper includes a detailed analysis of heterogeneous effects across different time windows, but I was unable to successfully apply this to my simulated dataset. Over the past few days, I attempted adjusting the data volume and modifying the simulation methods. However, the primary issue lies in the structure of the county-level data, which in many cases is too sparse. For example, lots of counties exhibit only one or zero deaths over the time periods analyzed, while the original study calculates death rates per million people. This mismatch between the granularity of my simulated data and the structure required by the model led to problems in generating meaningful results.
 
-## 3. Challenges with Simulated Data and Further Steps
+## 3. Challenges and Further Steps
 
-
-### Next Steps
-
-Moving forward, I plan to:
-
-1. **Expand the Simulated Data**: By increasing the size of the simulated dataset and adjusting the assumptions used in generating the data, I hope to address the issues related to data sparsity.
-2. **Resolve Looping Issues**: For the heterogeneous treatment effects analysis, I will focus on resolving the looping issues in the code and formatting the output appropriately.
-3. **Time Window Analysis**: I will continue experimenting with different approaches to simulate the data required for the heterogeneous treatment effects by time window.
-
-I anticipate that these steps will allow me to complete the replication task more comprehensively and address the remaining gaps in the analysis.
-
----
-
-This report provides an overview of the progress made on the RA test, the challenges faced, and the next steps planned. I will continue working on resolving the issues mentioned and will provide further updates as I progress.
