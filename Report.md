@@ -25,10 +25,9 @@ The primary focus of this section is replicating the OLS and IV regression resul
 | **PM 2.5 (μg/m³)**         | 0.2397       | 1.4000       | 1.2594       | 1.0442       | -4.7129      | -10.3116      |
 |                          | (0.9202)     | (0.9681)     | (1.2729)     | (1.7645)     | (2.6539)     | (3.8924)     |
 | **Dependent variable mean** | 389.84      | 138.18       | 214.12       | 325.19       | 534.64       | 1143.60       |
-| **Effect relative to mean, percent** | 0.0615      | 1.0132       | 0.5882       | 0.3211       | -0.8815      | -0.9017       |
+| **Effect relative to mean, percent** | 0.0615      | 1.0132      | 0.5882      | 0.3211      | -0.8815      | -0.9017       |
 | **Observations**          | 11908        | 11908        | 11908        | 11908        | 11908        | 11908        |
 | **Adjusted R²**          | 0.6125       | 0.6336       | 0.6525       | 0.5863       | 0.6834       | 0.5829       |
-
 | **Panel B. IV estimates** |               |               |               |               |               |               |
 | **PM 2.5 (μg/m³)**         | -3.2108      | -0.7039      | -0.8681      | -2.4704      | -11.9147      | -18.5509      |
 |                          | (2.1991)     | (2.2043)     | (2.8957)     | (3.8172)     | (6.6234)     | (9.3775)     |
@@ -37,6 +36,7 @@ The primary focus of this section is replicating the OLS and IV regression resul
 | **Effect relative to mean, percent** | -0.8240     | -0.5092      | -0.4049      | -0.7610      | -2.2274      | -1.6221       |
 | **Observations**          | 11883        | 11883        | 11883        | 11883        | 11883        | 11883        |
 | **Adjusted R²**          | -0.0016      | 0.0004       | -0.0006      | 0.0000       | -0.0056      | -0.0045       |
+
 The high standard errors and low Adjusted R² indicate a lack of statistical significance, which implies that the results may not be robust.
 
 
