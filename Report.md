@@ -8,7 +8,7 @@ This report outlines the current progress on the replication task. Although I wa
 
 As the original dataset was unavailable due to confidentiality restrictions, I simulated the required medical data. The process of simulating this data is comprehensively documented in the Jupyter notebook file titled `R_Simulated_Data.ipynb`. This file contains all details regarding the structure of the generated data and the assumptions underlying the simulation, which closely mirror the distributions and summary statistics provided in the original study.
 
-For clarity, you can review the complete simulation process and the resulting dataset by accessing [R_Simulated_Data.ipynb](path/to/R_Simulated_Data.ipynb).
+For clarity, you can review the complete simulation process and the resulting dataset by accessing [R_Simulated_Data.ipynb](R_Simulated_Data.ipynb).
 
 ## 1. Main Table Results (OLS and IV Regression)
 
