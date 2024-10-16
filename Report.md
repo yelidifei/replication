@@ -31,7 +31,6 @@ The primary focus of this section is replicating the OLS and IV regression resul
 | **Panel B. IV estimates** |               |               |               |               |               |               |
 | **PM 2.5 (μg/m³)**         | -3.2108      | -0.7039      | -0.8681      | -2.4704      | -11.9147      | -18.5509      |
 |                          | (2.1991)     | (2.2043)     | (2.8957)     | (3.8172)     | (6.6234)     | (9.3775)     |
-| **F-statistic**         |               |               |               |               |               |               |
 | **Dependent variable mean** | 389.85      | 138.22       | 214.36       | 324.61       | 534.91       | 1143.63       |
 | **Effect relative to mean, percent** | -0.8240     | -0.5092      | -0.4049      | -0.7610      | -2.2274      | -1.6221       |
 | **Observations**          | 11883        | 11883        | 11883        | 11883        | 11883        | 11883        |
