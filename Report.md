@@ -6,7 +6,7 @@ This report outlines the current progress on the replication task. Although I wa
 
 ## 0. Simulated Data Generation
 
-As the original dataset was unavailable due to confidentiality restrictions, I simulated the required medical data. The process of simulating this data is comprehensively documented in the Jupyter notebook file titled `R_Simulated_Data.ipynb`. This file contains all details regarding the structure of the generated data and the assumptions underlying the simulation, which closely mirror the distributions and summary statistics provided in the original study.
+As the original dataset was unavailable due to confidentiality restrictions, I simulated the required medical data. The process of simulating this data is comprehensively documented in the Jupyter notebook file titled `R_Simulated_Data.ipynb`. This file contains all details regarding the structure of the generated data and the assumptions underlying the simulation.
 
 For clarity, you can review the complete simulation process and the resulting dataset by accessing [R_Simulated_Data.ipynb](R_Simulated_Data.ipynb).
 
@@ -14,7 +14,7 @@ For clarity, you can review the complete simulation process and the resulting da
 
 ### 1.1 OLS and IV Regression Overview
 
-The primary focus of this section is replicating the OLS and IV regression results as shown in the original study's main tables. The table below presents a placeholder for the OLS and IV results generated using the simulated data.
+The primary focus of this section is replicating the OLS and IV regression results as shown in the original study's main tables. 
 
 #### Table 1: OLS and IV Estimates of Effect of PM 2.5 on Elderly Mortality, by Age Group
 
@@ -74,7 +74,7 @@ While the core part of this analysis was successfully run, I encountered some is
 
 ### 2.2 Heterogeneous Treatment Effects by Time Window
 
-The original paper includes a detailed analysis of heterogeneous effects across different time windows, but I was unable to successfully apply this to my simulated dataset. Over the past few days, I attempted adjusting the data volume and modifying the simulation methods. However, the primary issue lies in the structure of the county-level data, which in many cases is too sparse. For example, lots of counties exhibit only one or zero deaths over the time periods analyzed, while the original study calculates death rates per million people. This mismatch between the granularity of my simulated data and the structure required by the model led to problems in generating meaningful results.
+The original paper includes a detailed analysis of heterogeneous effects across different time windows, but I was unable to successfully apply this to my simulated dataset. Over the past few days, I attempted adjusting the data volume and modifying the simulation methods. However, the primary issue lies in the structure of the simulated data, which in many cases is too sparse: Lots of counties exhibit only one or zero deaths over the time periods analyzed, while the original study calculates death rates per million people. This mismatch between the granularity of my simulated data and the structure required by the model led to problems in generating results.
 
 ## 3. Challenges and Further Steps
 
