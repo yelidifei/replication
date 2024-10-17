@@ -68,7 +68,7 @@ In replicating these regressions, I encountered an issue related to the fixed ef
 
 ### 2.1 Average Treatment Effect Across Groups
 
-I successfully replicated the section related to the heterogeneous treatment effects across groups with different predicted conditional average treatment effects. This analysis was conducted based on the simulated data, and the results can be found in the folder `Data_simulated\Scratch`. The code used for this analysis, with little modifications to accommodate the simulated data on the given code, is located in `STATA_code\2.CDDF`.
+I successfully replicated the section related to the heterogeneous treatment effects across groups with different predicted conditional average treatment effects. This analysis was conducted based on the simulated data, and the results can be found in the folder [`Data_simulated/Scratch`](./Data_simulated/Scratch). The code used for this analysis, with little modifications to accommodate the simulated data on the given code, is located in [`STATA_code/2.CDDF`](./STATA_code/2.CDDF).
 
 While the core part of this analysis was successfully run, I encountered some issues in the looping structure that generates the final results. Due to time constraints, I have not yet resolved these problems or formatted the output into a clear table. 
 
