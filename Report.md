@@ -43,7 +43,7 @@ The high standard errors and low Adjusted R² indicate a lack of statistical sig
 |                               | All inpatient spending | Inpatient ER spending | Inpatient admissions rate | Inpatient ER admissions rate |  
 |-------------------------------|-----------------------|-----------------------|--------------------------|-----------------------------|  
 | **Panel A. OLS estimates**    |                       |                       |                          |                             |  
-| **Total Amount (any)**        |      85,514.59        |      -50,447.56      |        -1.8342          |         -0.3652            |  
+| **PM 2.5 (μg/m³)**            |      85,514.59        |      -50,447.56      |        -1.8342          |         -0.3652            |  
 |                               |     (53,187.16)       |     (27,323.96)      |        (4.24198)        |         (2.68918)          |  
 | **Dependent variable mean**    |      34,568,992       |      13,565,988      |         3,354.85        |         1,552.69           |  
 | **Effect relative to mean, percent** |     0.2474         |     -0.3719          |        -0.0547          |         -0.0235            |  
@@ -51,14 +51,14 @@ The high standard errors and low Adjusted R² indicate a lack of statistical sig
 | **Adjusted R²**              |        0.6219         |        0.5972        |         0.5966          |         0.5857             |  
 |                               |                       |                       |                          |                             |  
 | **Panel B. IV estimates**     |                       |                       |                          |                             |  
-| **Total Amount (any)**        |     -147,148.41       |      65,239.36       |         2.8003          |         3.7869             |  
+| **PM 2.5 (μg/m³)**            |     -147,148.41       |      65,239.36       |         2.8003          |         3.7869             |  
 |                               |    (119,952.09)       |     (55,783.23)      |        (8.03195)        |         (5.54853)          |  
 | **Dependent variable mean**    |      34,569,380       |      13,558,943      |         3,356.68        |         1,552.97           |  
 | **Effect relative to mean, percent** |    -0.4257         |       0.4812         |        -0.0008          |         0.2438             |  
 | **Observations**              |         11,294        |         11,294       |          11,294         |          11,294            |  
 | **Adjusted R²**              |      -0.0029          |      -0.0049         |        -0.0008          |         -0.0021            |  
 
-Both tables present challenges in useing the sim in establishing clear relationships between PM 2.5 exposure and health outcomes. The inconsistent results highlight potential limitations in the simulated data and the need for further research to better understand these complex dynamics.
+Both tables present challenges in using the simulated data in establishing clear relationships between PM 2.5 exposure and health outcomes. The inconsistent results highlight potential limitations in the simulated data and the need for further research to better understand these complex dynamics.
 
 ### 1.2 Adjustments to the Original Fixed Effects
 
@@ -74,7 +74,18 @@ While the core part of this analysis was successfully run, I encountered some is
 
 ### 2.2 Heterogeneous Treatment Effects by Time Window
 
-The original paper includes a detailed analysis of heterogeneous effects across different time windows, but I was unable to successfully apply this to my simulated dataset. Over the past few days, I attempted adjusting the data volume and modifying the simulation methods. However, the primary issue lies in the structure of the simulated data, which in many cases is too sparse: Lots of counties exhibit only one or zero deaths over the time periods analyzed, while the original study calculates death rates per million people. This mismatch between the granularity of my simulated data and the structure required by the model led to problems in generating results.
+The original paper includes a detailed analysis of heterogeneous effects across different time windows, but I was unable to successfully apply this to my simulated dataset. Over the past few days, I attempted adjusting the data volume and modifying the simulation methods. 
+
+However, the primary issue lies in the structure of the simulated data, which in many cases is too sparse: Lots of counties exhibit only one or zero deaths over the time periods analyzed, while the original study calculates death rates per million people. The issue encountered was that when calculating using person-day level data, the generated county-level data became quite extreme due to the limited amount of generated data. For the main OLS and IV regression analyses, I simulated some data based on the summary statistics presented in the original study. I also attempted to use data from a three-day window to extend the analysis over other longer periods; however, the limited data volume, combined with the large number sampled dates, resulted in numerous missing values.
+
 
 ## 3. Challenges and Further Steps
+Throughout the replication process, several limitations were encountered that hindered the full replication of the results:
 
+1. **Data Sparsity**: The simulated dataset, particularly the county-day level generated by the personal data, resulted in counties with very few or no deaths (due to the limetation of sample size and large date period), leading to unrealistic death rates and insufficient data points for accurate modeling. This discrepancy between the simulated data and the original study's requirements posed significant challenges for replication.
+   
+2. **Fixed Effects Complexity**: The original model's use of multiple fixed effects did not translate well to the simulated dataset. Due to the limited number of observations in the simulation, many fixed effects had singleton observations, leading to excessive data exclusion. Although I modified the fixed effects structure, this adjustment may have introduced discrepancies in the results.
+
+3. **Heterogeneous Treatment Effects**: While I managed to implement part of the heterogeneous treatment effect analysis, certain issues, particularly in handling looping functions and data formatting, remain unresolved. Additionally, the time window analysis could not have been effectively replicated due to the sparsity of the simulated data.
+
+These limitations reflect the challenges of working with my simulated dataset that does not perfectly match the structure of the original data.
